@@ -134,7 +134,7 @@ security:
     allow:
     - ^go$
     - ^npx$
-    - ^rst2html$
+    - ^rst2html(.py)?$
 
 # hugo module configuration
 
