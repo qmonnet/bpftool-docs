@@ -1,0 +1,148 @@
+baseURL: 'https://bpftool.dev/'
+languageCode: 'en-us'
+title: 'bpftool'
+
+# Language settings
+contentDir: 'content/en'
+defaultContentLanguage: 'en'
+defaultContentLanguageInSubdir: false
+# Useful when translating.
+enableMissingTranslationPlaceholders: true
+
+enableRobotsTXT: true
+
+# Will give values to .Lastmod etc.
+enableGitInfo: true
+
+# Highlighting config
+pygmentsCodeFences: true
+pygmentsUseClasses: false
+# Use the new Chroma Go highlighter in Hugo.
+pygmentsUseClassic: false
+#pygmentsOptions: "linenos=table"
+# See https://help.farbox.com/pygments.html
+pygmentsStyle: 'tango'
+
+# Configure how URLs look like per section.
+permalinks:
+  blog: '/:section/:year/:month/:day/:slug/'
+
+# Image processing configuration.
+imaging:
+  resampleFilter: 'CatmullRom'
+  quality: 75
+  anchor: 'smart'
+
+# Language configuration
+
+languages:
+  en:
+    languageName: 'English'
+    # Weight used for sorting.
+    weight: 1
+    params:
+      title: 'bpftool website'
+      description: 'bpftool documentation website'
+
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+    renderer:
+      unsafe: true
+  highlight:
+    # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
+    style: 'tango'
+    # Uncomment if you want your chosen highlight style used for code blocks without a specified language
+    # guessSyntax: 'true'
+
+# Everything below this are Site Params
+
+params:
+  copyright: 'The Bpftool Authors'
+
+  # First one is picked as the Twitter card image if not set on page.
+  # images:
+  # - 'images/project-illustration.png'
+
+  # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
+  github_repo: 'https://github.com/qmonnet/bpftool-docs'
+  # An optional link to a related project repo. For example, the sibling repository where your product code lives.
+  github_project_repo: 'https://github.com/libbpf/bpftool'
+
+  # Specify a value here if your content directory is not in your repo's root directory
+  # github_subdir: ''
+
+  # Uncomment this if your GitHub repo does not have "main" as the default branch,
+  # or specify a new value if you want to reference another branch in your GitHub links
+  github_branch: 'main'
+
+  # Enable Algolia DocSearch
+  search.algolia: false
+
+  # Enable Lunr.js offline search
+  offlineSearch: true
+
+  # Enable syntax highlighting and copy buttons on code blocks with Prism
+  prism_syntax_highlighting: false
+
+  # User interface configuration
+  ui:
+    # Set to true to disable breadcrumb navigation.
+    breadcrumb_disable: false
+    # Set to true to disable the About link in the site footer
+    footer_about_disable: false
+    # Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top navbar
+    navbar_logo: true
+    # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
+    navbar_translucent_over_cover_disable: false
+    # Enable to show the side bar menu in its compact state.
+    sidebar_menu_compact: true
+    # Enable to let users expand and collapse menu sections by toggling arrows
+    sidebar_menu_foldable: true
+    # Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
+    sidebar_search_disable: false
+
+  links:
+    # End user relevant links. These will show up on left side of footer and in the community page if you have one.
+    user:
+    - name: 'ebpf.io'
+      url: 'https://ebpf.io'
+      icon: 'fa fa-link'
+      desc: 'Resources about eBPF'
+    - name: 'Stack Overflow'
+      url: 'https://stackoverflow.com/questions/tagged/ebpf'
+      icon: 'fab fa-stack-overflow'
+      desc: 'Practical questions and curated answers'
+    developer:
+    - name: 'GitHub'
+      url: 'https://github.com/libbpf/bpftool'
+      icon: 'fab fa-github'
+      desc: 'GitHub mirror for bpftool'
+    - name: 'Kernel repository'
+      url: 'https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/tools/bpf/bpftool'
+      icon: 'fab fa-linux'
+      desc: "Sources for bpftool in the Linux kernel repository"
+    - name: 'BPF mailing list'
+      url: 'http://vger.kernel.org/vger-lists.html#bpf'
+      icon: 'fa fa-envelope'
+      desc: "Send patches or discuss bpftool's development"
+
+security:
+  exec:
+    allow:
+    - ^go$
+    - ^npx$
+    - ^rst2html$
+
+# hugo module configuration
+
+module:
+  proxy: 'direct'
+  hugoVersion:
+    extended: true
+    min: 0.119.0
+  imports:
+  - path: 'github.com/google/docsy'
+  - path: 'github.com/google/docsy/dependencies'
