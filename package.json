@@ -1,0 +1,30 @@
+{
+  "name": "bpftool-docs",
+  "version": "0.1.0",
+  "description": "Documentation for bpftool",
+  "main": "none.js",
+  "scripts": {
+    "start": "hugo server",
+    "build": "hugo build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qmonnet/bpftool-docs.git"
+  },
+  "keywords": [
+    "bpftool",
+    "ebpf",
+    "bpf"
+  ],
+  "author": "The Bpftool Authors",
+  "license": "(GPL-2.0-only OR BSD-2-Clause)",
+  "bugs": {
+    "url": "https://github.com/qmonnet/bpftool-docs/issues"
+  },
+  "homepage": "https://github.com/qmonnet/bpftool-docs#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "postcss-cli": "^11.0.0"
+  }
+}
