@@ -8,9 +8,11 @@
 
 # Documentation for bpftool
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b82f47fc-4225-4304-9b60-5effadbd0c1b/deploy-status)](https://app.netlify.com/sites/bpftool-docs/deploys)
+
 This repository contains extended documentation for [bpftool].
 
-Status: Work in progress, not deployed yet.
+Status: Work in progress, not officially deployed yet.
 
 [bpftool]: https://github.com/libbpf/bpftool
 
