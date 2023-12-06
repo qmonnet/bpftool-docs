@@ -7,10 +7,10 @@ description: 'A command-line tool to inspect and manage BPF objects'
 {{< param description >}}
 {.display-6}
 
-<img src="/bpftool_icon_color.svg" alt="bpftool logo" />
+<img src="/bpftool_icon_color.svg" alt="bpftool logo" height="300px" />
 
 Guiding humans to BPF
-{.display-6 .fst-italic}
+{.display-7 .fst-italic}
 
 <a class="btn btn-lg btn-primary me-3 mb-4"
    href="/docs/">
