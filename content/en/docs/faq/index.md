@@ -7,7 +7,7 @@ weight: 90
 ## How do I report bugs?
 
 Please post them to the BPF mailing list. Unless they are specific to the way
-the mirror repository is set up, and not to bpftool itself. See [the relevant
+the mirror repository is set up, and not to bpftool itself. See [the
 contributing guidelines]({{< ref "docs/contributing/report-issues" >}}) for
 details.
 
@@ -37,6 +37,31 @@ archives][packaging] for more context.
 
 [releases]: {{< param github_project_repo >}}/releases
 [packaging]: https://lore.kernel.org/all/ZEuOK8Rvlm52d2DK@syu-laptop/
+
+## Who are the authors of bpftool?
+
+Anyone is free and welcome to submit contributions to the project.
+
+Historically, Jakub Kicinski created bpftool in 2017. [At the
+beginning][first-commit], bpftool was a simpler utility called `bpf`, and
+hosted on Netronome's [bpf-tool] GitHub repository. It already relied on libbpf
+to inspect BPF programs and maps. A few months later, [the project was moved to
+the Linux kernel tree][bpftool-kernel], so that new BPF features could get
+support in bpftool as soon as developers added them to the kernel.
+
+There, it grew more features, getting tighter connections with some other
+kernel files. In 2022, Quentin Monnet reworked some portions of the program to
+make it easier to build it outside of the tree. This led to [the creation of
+the GitHub mirror repository][mirror-mail], and to Quentin becoming bpftool's
+official maintainer. With [more than 120 contributors][contributors] to its
+source code (not counting libbpf), bpftool results from the works of the whole
+BPF community!
+
+[first-commit]: https://github.com/Netronome/bpf-tool/commit/64be4aa83e7438b2a70cb5c64eae5086101c5b0d
+[bpf-tool]: https://github.com/Netronome/bpf-tool
+[bpftool-kernel]: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?h=71bb428fe2c19512ac671d5ee16ef3e73e1b49a8
+[mirror-mail]: https://lore.kernel.org/bpf/267a35a6-a045-c025-c2d9-78afbf6fc325@isovalent.com/
+[contributors]: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/tools/bpf/bpftool
 
 ## What does the logo represent?
 
