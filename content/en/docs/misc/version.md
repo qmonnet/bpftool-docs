@@ -15,4 +15,4 @@ or
 
 ```console debug=1
 $ bpftool -V
-die
+```
