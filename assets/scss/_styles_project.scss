@@ -1,7 +1,23 @@
+// Add a .display level, intermediate between .display-6 and regular text.
 .display-7 {
   font-size: calc(1.325rem + 0.9vw);
   font-weight: 300;
-  line-height: 1.2; }
-  @media (min-width: 1200px) {
-    .display-7 {
-      font-size: 2rem; } }
+  line-height: 1.2;
+}
+@media (min-width: 1200px) {
+  .display-7 {
+    font-size: 2rem;
+  }
+}
+
+// Looks like Docsy's main.scss includes _colors.scss between
+// _variables_project.scss and _sidebar-tree.scss, redefining $link-color?
+// We want to keep our value from our _variables_project.scss.
+.td-sidebar-nav {
+  a {
+    &:focus,
+    &:hover {
+      color: $link-color;
+    }
+  }
+}
