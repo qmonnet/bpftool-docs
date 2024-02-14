@@ -1,7 +1,7 @@
 ---
 title: 'FAQ'
 description: 'Frequently Asked Questions'
-weight: 90
+weight: 80
 ---
 
 ## How do I report bugs?
