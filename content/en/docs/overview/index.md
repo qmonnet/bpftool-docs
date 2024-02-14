@@ -42,7 +42,7 @@ Or you can get a list of the existing BPF maps with:
 Here is an example of a program dump:
 
 ```console
-# bpftool prog dump jited name return_0
+# bpftool prog dump xlated name return_0
 ```
 
 See the section on how to [Manage BPF objects][manage] for a description of the
@@ -53,14 +53,14 @@ related subcommands.
 Some other use cases fall into a second category: BPF developers may integrate
 bpftool into their workflow, in order to generate "BPF skeletons" for
 bootstrapping applications, to link separate BPF object files, or to produce
-specific BTF objects. More details are available in the [Build with
-bpftool][workflow] section of this documentation.
+specific BTF objects. More details are available in section [Build with
+bpftool][workflow].
 
 ## Other bpftool features
 
 The third section, [Extra features][extra], introduces additional
-functionalities that address more specific use cases, such as profiling BPF
-programs or probing the host for supported BPF features.
+functionalities of bpftool that address more specific use cases, such as
+profiling BPF programs or probing the host for supported BPF features.
 
 [install]: {{< ref "docs/installation" >}}
 [manage]: {{< ref "docs/manage" >}}
